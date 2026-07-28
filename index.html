@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brew Haven | Premium Coffee Experience</title>
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- AOS Animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top glass-nav">
+        <div class="container">
+            <a class="navbar-brand font-weight-bold" href="index.html">BREW<span>HAVEN</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="fas fa-bars text-white"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+                    <li class="nav-item">
+                        <button id="theme-toggle" class="btn btn-link nav-link">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <a href="cart.html" class="nav-link position-relative">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <video autoplay muted loop id="hero-video">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-coffee-being-poured-into-a-cup-3444-large.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="container h-100 d-flex align-items-center justify-content-center text-center text-white">
+            <div class="hero-content" data-aos="fade-up">
+                <h1 class="display-1 fw-bold">Awaken Your <span class="text-primary">Senses</span></h1>
+                <p class="lead mb-4">Experience the artistry of hand-picked beans and master roasting.</p>
+                <div class="d-flex justify-content-center gap-3">
+                    <a href="menu.html" class="btn btn-primary btn-lg px-5 py-3 rounded-pill shadow">Order Now</a>
+                    <a href="#about" class="btn btn-outline-light btn-lg px-5 py-3 rounded-pill">Our Story</a>
+                </div>
+            </div>
+        </div>
+        <div class="floating-beans">
+            <img src="https://cdn-icons-png.flaticon.com/512/3054/3054889.png" class="bean b1" alt="bean">
+            <img src="https://cdn-icons-png.flaticon.com/512/3054/3054889.png" class="bean b2" alt="bean">
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-5 glass-section">
+        <div class="container">
+            <div class="row text-center text-white">
+                <div class="col-md-3" data-aos="zoom-in">
+                    <h2 class="counter" data-target="1500">0</h2>
+                    <p>Daily Happy Clients</p>
+                </div>
+                <div class="col-md-3" data-aos="zoom-in" data-aos-delay="100">
+                    <h2 class="counter" data-target="50">0</h2>
+                    <p>Premium Blends</p>
+                </div>
+                <div class="col-md-3" data-aos="zoom-in" data-aos-delay="200">
+                    <h2 class="counter" data-target="12">0</h2>
+                    <p>Award Winning Baristas</p>
+                </div>
+                <div class="col-md-3" data-aos="zoom-in" data-aos-delay="300">
+                    <h2 class="counter" data-target="100">0</h2>
+                    <p>Ethical Sourcing %</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
