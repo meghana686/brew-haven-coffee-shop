@@ -3,47 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brew Haven | Premium Coffee Experience</title>
+    <title>Brew Haven | Premium Coffee Shop</title>
+    
     <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- AOS Animations -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <!-- Custom Cursor -->
-    <div class="custom-cursor"></div>
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
 
-    <!-- Scroll Progress Bar -->
-    <div class="scroll-progress"></div>
+    <!-- Scroll Progress -->
+    <div class="scroll-line"></div>
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg fixed-top glass-nav">
         <div class="container">
-            <a class="navbar-brand font-weight-bold" href="index.html">BREW<span>HAVEN</span></a>
+            <a class="navbar-brand" href="#">BREW <span>HAVEN</span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <i class="fas fa-bars text-white"></i>
+                <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto align-items-center">
-                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
-                    <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
-                    <li class="nav-item">
-                        <button id="theme-toggle" class="btn btn-link nav-link">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#shop">Shop</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item ms-lg-4">
+                        <button id="theme-btn" class="nav-link border-0 bg-transparent">
                             <i class="fas fa-moon"></i>
                         </button>
                     </li>
-                    <li class="nav-item">
-                        <a href="cart.html" class="nav-link position-relative">
+                    <li class="nav-item ms-lg-3">
+                        <div class="cart-icon" data-bs-toggle="modal" data-bs-target="#cartModal">
                             <i class="fas fa-shopping-bag"></i>
-                            <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">0</span>
-                        </a>
+                            <span class="cart-badge">0</span>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -51,54 +54,64 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <video autoplay muted loop id="hero-video">
-            <source src="https://assets.mixkit.co/videos/preview/mixkit-coffee-being-poured-into-a-cup-3444-large.mp4" type="video/mp4">
+    <section id="home" class="hero-section">
+        <video autoplay muted loop playsinline class="hero-video">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-coffee-beans-falling-into-a-pile-3442-large.mp4" type="video/mp4">
         </video>
         <div class="hero-overlay"></div>
-        <div class="container h-100 d-flex align-items-center justify-content-center text-center text-white">
-            <div class="hero-content" data-aos="fade-up">
-                <h1 class="display-1 fw-bold">Awaken Your <span class="text-primary">Senses</span></h1>
-                <p class="lead mb-4">Experience the artistry of hand-picked beans and master roasting.</p>
-                <div class="d-flex justify-content-center gap-3">
-                    <a href="menu.html" class="btn btn-primary btn-lg px-5 py-3 rounded-pill shadow">Order Now</a>
-                    <a href="#about" class="btn btn-outline-light btn-lg px-5 py-3 rounded-pill">Our Story</a>
-                </div>
+        <div class="container hero-content text-center text-white">
+            <h1 data-aos="fade-down">The Art of the <br><span class="text-accent">Perfect Brew</span></h1>
+            <p class="lead" data-aos="fade-up" data-aos-delay="200">Ethically sourced, masterfully roasted, glass-pressed excellence.</p>
+            <div class="hero-btns" data-aos="zoom-in" data-aos-delay="400">
+                <a href="#menu" class="btn btn-accent me-3">View Menu</a>
+                <a href="#shop" class="btn btn-outline-light">Order Beans</a>
             </div>
-        </div>
-        <div class="floating-beans">
-            <img src="https://cdn-icons-png.flaticon.com/512/3054/3054889.png" class="bean b1" alt="bean">
-            <img src="https://cdn-icons-png.flaticon.com/512/3054/3054889.png" class="bean b2" alt="bean">
         </div>
     </section>
 
-    <!-- Stats Section -->
-    <section class="py-5 glass-section">
-        <div class="container">
-            <div class="row text-center text-white">
-                <div class="col-md-3" data-aos="zoom-in">
-                    <h2 class="counter" data-target="1500">0</h2>
-                    <p>Daily Happy Clients</p>
+    <!-- Menu Section -->
+    <section id="menu" class="py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Brew Haven Menu</h2>
+                <div class="filter-btns mt-4">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="hot">Hot</button>
+                    <button class="filter-btn" data-filter="cold">Cold</button>
                 </div>
-                <div class="col-md-3" data-aos="zoom-in" data-aos-delay="100">
-                    <h2 class="counter" data-target="50">0</h2>
-                    <p>Premium Blends</p>
-                </div>
-                <div class="col-md-3" data-aos="zoom-in" data-aos-delay="200">
-                    <h2 class="counter" data-target="12">0</h2>
-                    <p>Award Winning Baristas</p>
-                </div>
-                <div class="col-md-3" data-aos="zoom-in" data-aos-delay="300">
-                    <h2 class="counter" data-target="100">0</h2>
-                    <p>Ethical Sourcing %</p>
-                </div>
+            </div>
+
+            <div class="row g-4" id="menu-container">
+                <!-- Coffee items will be injected by JavaScript -->
             </div>
         </div>
     </section>
+
+    <!-- Cart Modal -->
+    <div class="modal fade" id="cartModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content glass-card">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title">Your Order</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body" id="cart-items">
+                    <p class="text-center">Your cart is empty.</p>
+                </div>
+                <div class="modal-footer border-0">
+                    <div class="w-100 d-flex justify-content-between mb-3">
+                        <span>Total:</span>
+                        <span id="cart-total" class="fw-bold">$0.00</span>
+                    </div>
+                    <button class="btn btn-accent w-100">Checkout Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="js/app.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
